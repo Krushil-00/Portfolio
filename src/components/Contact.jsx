@@ -59,15 +59,15 @@ const Contact = () => {
 
   return (
     <SmoothScroll id="contact">
-      <section id="contact" className="py-16 bg-black text-white">
+      <section id="contact" className="py-16 bg-black text-white bg-gray-900 py-8 mx-2 rounded-lg shadow-lg border border-hacker">
       <div className="container mx-auto px-4 max-w-6xl">
           {/* Terminal Header */}
-          <div className="flex items-center mb-6">
+          <div className=" items-center mb-6">
             <div className="flex space-x-2 mr-4">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
-            </div>
+            </div><br />
             <h2 className="text-2xl md:text-3xl font-mono text-hacker glow-text">
               $ ./contact_me.sh --secure-channel
             </h2>

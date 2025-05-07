@@ -25,7 +25,7 @@ const MatrixRain = () => {
     if (dimensions.width === 0) return;
 
     const columns = Math.floor(dimensions.width / 15);
-    const characters = "01アイウエオカキクケコ";
+    const characters = "01"; // "01アイウエオカキクケコ"
     
     // Create initial drops
     const initialDrops = Array.from({ length: columns }).map((_, i) => ({

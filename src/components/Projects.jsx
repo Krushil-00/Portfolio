@@ -30,22 +30,22 @@ const Projects = () => {
   
     return (
       <SmoothScroll id="projects">
-      <section id="projects" className="py-16 bg-black text-white">
+      <section id="projects" className="bg-black text-white bg-gray-900 py-8 my-8 mx-2 rounded-lg shadow-lg border border-hacker">
         <div className="container mx-auto px-4">
           {/* Terminal Header */}
-          <div className="flex items-center mb-8">
+          <div className=" items-center mb-8">
             <div className="flex space-x-2 mr-4">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
-            </div>
+            </div><br />
             <h2 className="text-2xl md:text-3xl font-mono text-hacker">
               ./projects
             </h2>
           </div>
   
           {/* Terminal Command */}
-          <div className="mb-6 font-mono bg-gray-900 p-3 rounded-lg border border-gray-700">
+          <div className="mb-6 font-mono bg-gray-800 p-3 rounded-lg border border-gray-700">
             <span className="text-matrix">$</span>
             <span className="ml-2 text-white">ls -la --projects | grep "react\|node\|python"</span>
           </div>

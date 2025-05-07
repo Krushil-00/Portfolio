@@ -6,12 +6,22 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [showCursor, setShowCursor] = useState(true);
 
+  const [binaryHover, setBinaryHover] = useState(null);
+  // Generate binary string matching nav item length
+  const generateBinary = (length) => {
+    let binary = '';
+    while (binary.length < length) {
+      binary += Math.random().toString(2).substring(2);
+    }
+    return binary.substring(0, length);
+  };
+
   const navItems = [
-    { label: 'About', section: 'about' },
-    { label: 'Education', section: 'education' },
-    { label: 'Skills', section: 'skills' },
-    { label: 'Projects', section: 'projects' },
-    { label: 'Contact', section: 'contact' }
+    { label: 'About', section: 'about', length:5 },
+    { label: 'Education', section: 'education', length:9 },
+    { label: 'Skills', section: 'skills', length:6 },
+    { label: 'Projects', section: 'projects', length:8 },
+    { label: 'Contact', section: 'contact', length:7 }
   ];
 
   // Handle navigation click with smooth scroll and offset
@@ -101,7 +111,12 @@ const Navbar = () => {
           {navItems.map((item) => {
             const lowerItem = item.section;
             return (
-              <div key={item.section} className="relative">
+              <div
+                key={item.section}
+                className="relative"
+                onMouseEnter={() => setBinaryHover(lowerItem)}
+                onMouseLeave={() => setBinaryHover(null)}
+              >
                 <a 
                   href={`#${lowerItem}`}
                   className={`font-mono transition-colors relative ${
@@ -112,14 +127,21 @@ const Navbar = () => {
                   onClick={(e) => {
                     e.preventDefault();
                     handleNavClick(lowerItem);
+                    setActiveSection(lowerItem);
                   }}
                 >
-                  {item.label}
+                  {binaryHover === lowerItem ? (
+                    <span className="text-hacker">
+                      {generateBinary(item.length)}
+                    </span>
+                  ) : (
+                    item.label
+                  )}
                   <motion.span
                     initial={{ width: 0 }}
                     animate={{ 
-                      width: activeSection === lowerItem ? '100%' : 0,
-                      opacity: activeSection === lowerItem ? 1 : 0
+                      width: activeSection === lowerItem ? '100%' : binaryHover === lowerItem ? '100%' : 0,
+                      opacity: activeSection === lowerItem ? 1 : binaryHover === lowerItem ? 0.8 : 0
                     }}
                     transition={{ duration: 0.3 }}
                     className="absolute -bottom-1 left-0 h-0.5 bg-hacker"
@@ -150,7 +172,7 @@ const Navbar = () => {
                 href={`#${lowerItem}`}
                 className={`font-mono transition-colors relative group ${
                   activeSection === lowerItem 
-                    ? 'text-matrix' 
+                    ? 'text-matrix text-hacker' 
                     : 'text-hacker hover:text-matrix'
                 }`}
                 onClick={(e) => {

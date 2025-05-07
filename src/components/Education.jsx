@@ -37,16 +37,16 @@ const Education = () => {
 
   return (
     <SmoothScroll id="education">
-    <section id="education" className="py-16 bg-black text-white">
+    <section id="education" className="py-16 bg-black text-white mx-2">
       
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 bg-gray-900 py-8 rounded-lg shadow-lg border border-hacker">
         {/* Terminal-style header */}
-        <div className="flex items-center mb-8">
+        <div className=" items-center mb-8">
           <div className="flex space-x-2 mr-4">
             <div className="w-3 h-3 rounded-full bg-red-500"></div>
             <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
             <div className="w-3 h-3 rounded-full bg-green-500"></div>
-          </div>
+          </div><br />
           <h2 className="text-2xl md:text-3xl font-mono text-hacker">
             education.log
           </h2>
@@ -63,7 +63,7 @@ const Education = () => {
 
               {/* Education card */}
               <div 
-                className={`bg-gray-900 border ${expandedItem === item.id ? 'border-hacker' : 'border-gray-700'} rounded-lg p-6 font-mono transition-all duration-300 cursor-pointer`}
+                className={`bg-gray-800 border ${expandedItem === item.id ? 'border-hacker' : 'border-gray-700'} rounded-lg p-6 font-mono transition-all duration-300 cursor-pointer`}
                 onClick={() => toggleExpand(item.id)}
               >
                 <div className="flex justify-between items-start">
