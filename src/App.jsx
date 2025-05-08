@@ -12,7 +12,7 @@ import MatrixRain from './components/MatrixRain'
 
 const App = () => {
   return (
-    <div className="bg-black min-h-screen">
+    <div className="bg-black min-h-screen py-1">
       <Layout>
         <Navbar />
         <Hero />

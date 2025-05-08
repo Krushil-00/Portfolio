@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 import SmoothScroll from './SmoothScroll';
 
 const Contact = () => {
+  const apiKey = import.meta.env.VITE_WEB3FORMS_API_KEY;  // process.env.REACT_APP_NEWS_API_KEY
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,13 +21,14 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
+      {console.log('Access Key:', import.meta.env.VITE_WEB3FORMS_API_KEY);}
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: '863c7e1f-f108-4eb8-bb5b-6fcf2ee75a11', // process.env.REACT_APP_NEWS_API_KEY
+          access_key: apiKey,
           name: formData.name,
           email: formData.email,
           message: formData.message,
@@ -59,7 +61,7 @@ const Contact = () => {
 
   return (
     <SmoothScroll id="contact">
-      <section id="contact" className="py-16 bg-black text-white bg-gray-900 py-8 mx-2 rounded-lg shadow-lg border border-hacker">
+      <section id="contact" className="text-white bg-gray-900 py-8 mx-2 rounded-lg shadow-lg border border-hacker mb-8">
       <div className="container mx-auto px-4 max-w-6xl">
           {/* Terminal Header */}
           <div className=" items-center mb-6">
@@ -179,7 +181,7 @@ const Contact = () => {
                     <span className="text-hacker mr-4 group-hover:text-matrix transition-colors">
                       {link.icon}
                     </span>
-                    <span className="text-white font-mono text-sm md:text-base">
+                    <span className="text-white font-mono text-xs sm:text-sm md:text-base">
                       {link.label}
                     </span>
                     <span className="ml-auto text-gray-500 group-hover:text-hacker transition-colors">
@@ -200,11 +202,16 @@ const Contact = () => {
           </div>
 
           {/* Terminal Footer */}
-          <div className="mt-8 font-mono text-gray-500 text-sm flex items-center">
-            <span className="text-matrix mr-2">$</span>
-            <span className="typing-animation">connection_established:ready_for_input</span>
-            <span className="ml-2 animate-blink"></span>
-          </div>
+          <div className="mt-8 font-mono text-gray-500 text-sm">
+  <div className="flex items-center">
+    <span className="text-matrix mr-2">$</span>
+    <span className="">connection_established:</span>
+  </div>
+  <div className="flex items-center">
+    <span className="typing-animation">ready_for_input</span>
+    <span className="ml-2 animate-blink"></span>
+  </div>
+</div>
         </div>
 
         <style>{`
