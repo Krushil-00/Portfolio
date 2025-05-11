@@ -95,7 +95,7 @@ const About = () => {
           <div className="relative">
             <motion.img
               ref={photoRef}
-              src="/myPic.jpg"
+              src="/myPic.png"
               alt="Profile"
               className="w-64 h-64 md:w-70 md:h-70 rounded-full border-4 border-hacker object-cover cursor-pointer"
               onClick={triggerAccessGranted}
