@@ -112,7 +112,7 @@ const About = () => {
         </div>
 
         {/* Terminal content */}
-        <div className="container bg-gray-900 py-8 px-4 rounded-lg shadow-lg border border-hacker">
+        <div className="container bg-gray-950 py-8 px-4 rounded-lg shadow-lg border border-hacker">
           <motion.div
             className="items-center mb-6"
             variants={staggeredItem}
@@ -132,7 +132,7 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            className="bg-gray-800 border border-hacker rounded-lg p-6 font-mono"
+            className="bg-gray-900/50 border border-hacker rounded-lg p-6 font-mono"
             variants={terminalWindow}
             initial="hidden"
             whileInView="visible"
@@ -180,7 +180,7 @@ const About = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={quickFade}
-              className="mt-2 px-4 py-2 bg-gray-800 border border-hacker text-hacker hover:bg-hacker hover:text-black transition-colors text-sm"
+              className="mt-2 px-4 py-2 bg-gray-900 border border-hacker text-hacker hover:bg-hacker hover:text-black transition-colors text-sm"
             >
               {showMore ? 'show less' : 'read more'}
             </motion.button>

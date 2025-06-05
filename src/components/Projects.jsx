@@ -42,7 +42,7 @@ const Projects = () => {
 
   return (
     <SmoothScroll id="projects">
-      <section id="projects" className="bg-black text-white bg-gray-900 py-8 my-8 mx-2 rounded-lg shadow-lg border border-hacker">
+      <section id="projects" className="bg-black text-white bg-gray-950 py-8 my-8 mx-2 rounded-lg shadow-lg border border-hacker">
         <div className="container mx-auto px-4">
           {/* Terminal Header */}
           <div className="items-center mb-8">
@@ -57,7 +57,7 @@ const Projects = () => {
           </div>
 
           {/* Terminal Command */}
-          <div className="mb-6 font-mono bg-gray-800 p-3 rounded-lg border border-gray-700">
+          <div className="mb-6 font-mono bg-gray-900/50 p-3 rounded-lg border border-gray-700">
             <span className="text-matrix">$</span>
             <span className="ml-2 text-white">ls -la --projects | grep "react\|node\|python"</span>
           </div>
@@ -67,10 +67,10 @@ const Projects = () => {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="bg-gray-900 border border-gray-700 hover:border-hacker rounded-lg overflow-hidden transition-all duration-300 group"
+                className="bg-gray-900/50 border border-gray-700 hover:border-hacker rounded-lg overflow-hidden transition-all duration-300 group"
               >
                 {/* Project Header */}
-                <div className="border-b border-gray-700 p-4 bg-gray-800">
+                <div className="border-b border-gray-700 p-4 bg-gray-900">
                   <h3 className="text-xl font-mono text-hacker flex items-center">
                     <span className="text-matrix mr-2">❯</span>
                     {project.title}
@@ -88,7 +88,7 @@ const Projects = () => {
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="bg-gray-800 text-white px-3 py-1 rounded-full text-xs border border-gray-600 hover:border-hacker transition-colors"
+                          className="bg-gray-900 text-white px-3 py-1 rounded-full text-xs border border-gray-600 hover:border-hacker transition-colors"
                         >
                           {tech}
                         </span>
@@ -131,7 +131,7 @@ const Projects = () => {
         {/* Download Prompt Modal */}
         {showDownloadPrompt && (
           <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-            <div className="bg-gray-900 border border-hacker p-6 rounded-lg max-w-md w-full mx-4">
+            <div className="bg-gray-950 border border-hacker p-6 rounded-lg max-w-md w-full mx-4">
               <h3 className="text-xl font-mono text-hacker mb-4">Command Line Program</h3>
               <p className="text-gray-300 mb-4">
                 This is a command line application. Download the source code from GitHub
@@ -141,7 +141,7 @@ const Projects = () => {
               <div className="flex justify-end space-x-3">
                 <button
                   onClick={() => setShowDownloadPrompt(false)}
-                  className="px-4 py-2 border border-gray-600 text-gray-300 rounded-md hover:bg-gray-800 font-mono text-sm"
+                  className="px-4 py-2 border border-gray-600 text-gray-300 rounded-md hover:bg-gray-900 font-mono text-sm"
                 >
                   Cancel
                 </button>

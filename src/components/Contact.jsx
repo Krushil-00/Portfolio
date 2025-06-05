@@ -61,7 +61,7 @@ const Contact = () => {
 
   return (
     <SmoothScroll id="contact">
-      <section id="contact" className="text-white bg-gray-900 py-8 mx-2 rounded-lg shadow-lg border border-hacker mb-8">
+      <section id="contact" className="text-white bg-gray-950 py-8 mx-2 rounded-lg shadow-lg border border-hacker mb-8">
       <div className="container mx-auto px-4 max-w-6xl">
           {/* Terminal Header */}
           <div className=" items-center mb-6">
@@ -101,7 +101,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full bg-gray-800/70 border border-gray-700 rounded-md py-3 px-4 text-white font-mono focus:border-hacker focus:ring-1 focus:ring-hacker/50 outline-none transition-all"
+                    className="w-full bg-gray-900 border border-gray-700 rounded-md py-3 px-4 text-white font-mono focus:border-hacker focus:ring-1 focus:ring-hacker/50 outline-none transition-all"
                     required
                     placeholder="_"
                   />
@@ -117,7 +117,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full bg-gray-800/70 border border-gray-700 rounded-md py-3 px-4 text-white font-mono focus:border-hacker focus:ring-1 focus:ring-hacker/50 outline-none transition-all"
+                    className="w-full bg-gray-900 border border-gray-700 rounded-md py-3 px-4 text-white font-mono focus:border-hacker focus:ring-1 focus:ring-hacker/50 outline-none transition-all"
                     required
                     placeholder="_"
                   />
@@ -134,7 +134,7 @@ const Contact = () => {
                     onChange={handleChange}
                     rows="5"
                     style={{ resize: 'none' }}
-                    className="w-full bg-gray-800/70 border border-gray-700 rounded-md py-3 px-4 text-white font-mono focus:border-hacker focus:ring-1 focus:ring-hacker/50 outline-none transition-all"
+                    className="w-full bg-gray-900 border border-gray-700 rounded-md py-3 px-4 text-white font-mono focus:border-hacker focus:ring-1 focus:ring-hacker/50 outline-none transition-all"
                     required
                     placeholder="_"
                   ></textarea>
@@ -176,7 +176,7 @@ const Contact = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center p-4 bg-gray-800/40 rounded-md hover:bg-gray-800/70 transition-all border border-gray-700 hover:border-hacker group"
+                    className="flex items-center p-4 bg-gray-900 rounded-md hover:bg-gray-800/70 transition-all border border-gray-700 hover:border-hacker group"
                   >
                     <span className="text-hacker mr-4 group-hover:text-matrix transition-colors">
                       {link.icon}
@@ -193,7 +193,7 @@ const Contact = () => {
               </div>
 
               {/* Encryption Note */}
-              <div className="mt-8 p-3 bg-gray-900/30 border border-hacker/20 rounded-md">
+              <div className="mt-8 p-3 bg-gray-900/70 border border-hacker/20 rounded-md">
                 <p className="text-xs text-gray-400 font-mono">
                   <span className="text-hacker">[SECURITY NOTICE]</span> All communications are encrypted end-to-end. Your data is protected.
                 </p>
