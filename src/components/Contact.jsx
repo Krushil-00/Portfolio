@@ -92,8 +92,8 @@ const Contact = () => {
 
               <form onSubmit={handleSubmit} className="space-y-5" autoComplete='off'>
                 <div className="group">
-                  <div className="flex items-center mb-1">
-                    <span className="text-hacker font-mono mr-2">[user@terminal ~]$</span>
+                  <div className="flex items-center mb-1 justify-between">
+                    <span className="text-hacker font-mono mr-2">[user@terminal]</span>
                     <label className="text-gray-300 font-mono text-sm">enter_name</label>
                   </div>
                   <input
@@ -108,8 +108,8 @@ const Contact = () => {
                 </div>
 
                 <div className="group">
-                  <div className="flex items-center mb-1">
-                    <span className="text-hacker font-mono mr-2">[user@terminal ~]$</span>
+                  <div className="flex items-center mb-1 justify-between">
+                    <span className="text-hacker font-mono mr-2">[user@terminal]</span>
                     <label className="text-gray-300 font-mono text-sm">enter_email</label>
                   </div>
                   <input
@@ -124,8 +124,8 @@ const Contact = () => {
                 </div>
 
                 <div className="group">
-                  <div className="flex items-center mb-1">
-                    <span className="text-hacker font-mono mr-2">[user@terminal ~]$</span>
+                  <div className="flex items-center mb-1 justify-between">
+                    <span className="text-hacker font-mono mr-2">[user@terminal]</span>
                     <label className="text-gray-300 font-mono text-sm">enter_message</label>
                   </div>
                   <textarea

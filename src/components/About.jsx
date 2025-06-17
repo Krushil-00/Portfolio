@@ -103,11 +103,11 @@ const About = () => {
               whileTap={{ scale: 0.95 }}
               transition={quickFade}
             />
-            <motion.div
+            {/* <motion.div
               className="absolute inset-0 rounded-full border-4 border-matrix pointer-events-none"
               animate={controls}
               style={{ originX: 0.5, originY: 0.5 }}
-            />
+            /> */}
           </div>
         </div>
 
@@ -144,7 +144,7 @@ const About = () => {
               custom={1}
             >
               <span className="text-matrix text-white">$</span>
-              <span className="ml-2 text-white">cat about_me.txt</span>
+              <span className="ml-2 text-white">cat who_am_i.txt</span>
             </motion.div>
 
             {bioLines.slice(0, showMore ? bioLines.length : 2).map((line, i) => (
