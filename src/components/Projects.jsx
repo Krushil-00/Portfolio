@@ -25,10 +25,10 @@ const Projects = () => {
     {
       id: 3,
       title: "Card Game",
-      description: "I developed the '3 Patti' game in Java to enhance my logical thinking and understanding of the language, using control structures like loops and conditionals for game flow. I ran the game through the command prompt, gaining experience compiling and executing Java programs in a terminal.",
-      technologies: ["Java"],
+      description: "I developed the '3 Patti' game in Java to enhance my logical thinking and understanding of the language, using control structures like loops and conditionals for game flow. I ran the game through the command prompt, gaining experience compiling and executing Java programs in a terminal. Later, I recreated the game using HTML, Tailwind CSS, and JavaScript to explore front-end technologies and improve its user interface and interactivity",
+      technologies: ["Java", "HTML", "Tailwindcss", "JavaScript"],
       github: "https://github.com/Krushil-00/Card-Game",
-      demo: ""
+      demo: "https://cardgame-online.netlify.app/"
     }
   ];
 
@@ -59,7 +59,8 @@ const Projects = () => {
           {/* Terminal Command */}
           <div className="mb-6 font-mono bg-gray-900/50 p-3 rounded-lg border border-gray-700">
             <span className="text-matrix">$</span>
-            <span className="ml-2 text-white">ls -la --projects | grep "react\|node\|python"</span>
+            <span className="ml-2 text-white">ls -la projects | grep -E 'react|node|python'
+</span>
           </div>
 
           {/* Projects Grid */}
@@ -129,7 +130,7 @@ const Projects = () => {
         </div>
 
         {/* Download Prompt Modal */}
-        {showDownloadPrompt && (
+        {/* {showDownloadPrompt && (
           <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
             <div className="bg-gray-950 border border-hacker p-6 rounded-lg max-w-md w-full mx-4">
               <h3 className="text-xl font-mono text-hacker mb-4">Command Line Program</h3>
@@ -156,7 +157,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
       </section>
     </SmoothScroll>
   );
